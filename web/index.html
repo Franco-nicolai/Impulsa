@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Desarrolla tu idea, contrasta tus supuestos y conecta la evidencia con tus decisiones.">
+<meta name="theme-color" content="#f9f8f6">
+<title>Impulso · Espacio de trabajo</title>
+<link rel="stylesheet" href="/style.css">
+<script type="module" src="/app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<aside class="sidebar" aria-label="Navegación principal">
+  <a href="#inicio" class="brand" aria-label="Impulso, inicio"><span class="brand-mark" aria-hidden="true">↗</span> impulso<span class="brand-dot">.</span></a>
+  <div class="switch-wrap">
+    <label for="projects" class="section-label">Proyecto</label>
+    <div class="switch"><span class="project-initial" id="initial" aria-hidden="true">I</span><select id="projects" aria-label="Cambiar proyecto"><option>Abriendo…</option></select></div>
+  </div>
+  <nav id="navigation">
+    <button data-view="inicio" type="button"><span aria-hidden="true">⌂</span> Inicio</button>
+    <button data-view="bitacora" type="button"><span aria-hidden="true">☷</span> Bitácora <small id="nav-count" hidden></small></button>
+    <button data-view="modelo" type="button"><span aria-hidden="true">◫</span> Modelo Canvas</button>
+    <button data-view="guia" type="button"><span aria-hidden="true">✧</span> Guía en ChatGPT</button>
+  </nav>
+  <div class="side-bottom">
+    <button class="button secondary new-project" data-action="new-project" type="button"><span aria-hidden="true">＋</span> Nuevo proyecto</button>
+    <div class="side-status"><i></i><span id="connection-status">Espacio privado</span></div>
+  </div>
+</aside>
+<div class="workspace">
+  <header class="topbar">
+    <div class="crumb"><span>Espacio de trabajo</span><span aria-hidden="true">/</span><strong id="top-title">Impulso</strong></div>
+    <div class="top-actions"><button class="button secondary chat-top" data-view="guia" type="button"><span aria-hidden="true">✧</span> Guía en ChatGPT</button><span class="avatar" aria-hidden="true">I</span></div>
+  </header>
+  <main id="main" tabindex="-1"><div class="loading" role="status">Abriendo tu espacio…</div></main>
+</div>
+<dialog id="editor" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+<div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

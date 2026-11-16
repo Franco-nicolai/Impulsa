@@ -1,0 +1,16 @@
+{
+  "name": "impulso",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/preview.mjs",
+    "test": "node --test scripts/flow.test.mjs"
+  },
+  "dependencies": {
+    "@vercel/blob": "2.9.0"
+  }
+}
