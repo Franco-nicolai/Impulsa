@@ -1,9 +1,20 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "functions": {"api/router.js": {"includeFiles": "web/**"}},
+  "functions": {
+    "api/router.js": {
+      "includeFiles": "web/**"
+    }
+  },
   "rewrites": [
-    {"source": "/", "destination": "/api/router?route=/"},
-    {"source": "/:route*", "destination": "/api/router?route=/:route*"}
-  ]
+    {
+      "source": "/",
+      "destination": "/api/router?route=/"
+    },
+    {
+      "source": "/:route*",
+      "destination": "/api/router?route=/:route*"
+    }
+  ],
+  "outputDirectory": "web"
 }
